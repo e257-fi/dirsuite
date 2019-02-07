@@ -344,10 +344,10 @@ trait DirSuiteLike extends FunSuiteLike {
     registerIgnoredTest(pattern.toString + " => " + testname.toString) {}
   }
 
-  private def findFiles(basedir: Path, testPattern: FindFilesPattern): Files = {
+  private def findFiles(basedir: Path, testPattern: FindFilesPattern): Seq[File] = {
     testPattern match {
-      case glob: Glob => File(basedir).glob(glob.glob)
-      case regex: Regex => File(basedir).globRegex(regex.regex.r)
+      case glob: Glob => File(basedir).glob(glob.glob).toSeq
+      case regex: Regex => File(basedir).globRegex(regex.regex.r).toSeq
     }
   }
 

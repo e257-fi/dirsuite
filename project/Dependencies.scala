@@ -5,9 +5,9 @@ object Dependencies {
   /*
    * Versions
    */
-  val betterFilesVersion = "3.1.0"
+  val betterFilesVersion = "3.7.0"
   val scalaArmVersion = "2.0"
-  val scalatestVersion = "3.0.4"
+  val scalatestVersion = "3.0.5"
 
   /*
    * Libraries: scala
@@ -16,7 +16,4 @@ object Dependencies {
   val scalaArm = "com.jsuereth" %% "scala-arm" % scalaArmVersion
   val scalatest = "org.scalatest" %% "scalatest" % scalatestVersion
 
-  /*
-   * Libraries: java
-   */
 }

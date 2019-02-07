@@ -6,7 +6,7 @@ import Dependencies._
 
 lazy val commonSettings = Seq(
   organization := "fi.e257.testing",
-  scalaVersion := "2.12.3",
+  scalaVersion := "2.12.8",
   scalacOptions ++= Seq(
 	"-Xlint",
 	"-deprecation",
