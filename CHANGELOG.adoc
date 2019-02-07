@@ -12,11 +12,11 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 === 0.21.0-SNAPSHOT
 
-Dependency updates
+Dependency updates and enforced ordering of execution of test cases.
 
 ==== Fixes
 
-None
+Enforce execution ordering of test cases (sort based on path name).
 
 
 ==== Development
@@ -25,6 +25,7 @@ Updated deps and tools:
 
 * dependencies
 ** better-files: 3.7.0
+** scala-arm: removed
 ** scalatest: 3.0.5
 * build
 ** scala: 2.12.8

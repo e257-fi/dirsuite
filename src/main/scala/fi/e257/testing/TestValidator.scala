@@ -18,6 +18,7 @@ package fi.e257.testing
 
 import java.nio.file.Path
 
+import better.files.File
 import org.scalactic.TripleEquals._
 import org.scalatest.StreamlinedXmlEquality._
 
@@ -46,12 +47,10 @@ object TestValidator {
    * @return Either None or Some(Validation error message)
    */
   def txtValidator(testname: Path, reference: Path, output: Path): Option[String] = {
-    // TODO: Scala-ARM, and io.File?
-    val srcFirst = scala.io.Source.fromFile(output.toString)
-    val txtFirst = try srcFirst.mkString  finally srcFirst.close()
 
-    val srcSecond = scala.io.Source.fromFile(reference.toString)
-    val txtSecond = try srcSecond.mkString  finally srcSecond.close()
+    val txtFirst = File(output).lines.mkString
+
+    val txtSecond = File(reference).lines.mkString
 
     if (txtFirst === txtSecond) {
       None

@@ -9,7 +9,6 @@ Components (used with DirSuite):
 
  * link:http://www.scalatest.org/[ScalaTest]
  * link:https://github.com/pathikrit/better-files[Better-files]
- * link:https://github.com/jsuereth/scala-arm[Scala-ARM (automatic resource mgmt)]
 
 
 Build-tools (used to build DirSuite):

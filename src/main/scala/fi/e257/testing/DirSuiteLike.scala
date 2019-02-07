@@ -22,7 +22,6 @@ import better.files._
 import org.scalactic.source.Position
 import org.scalatest.FunSuiteLike
 import org.scalatest.exceptions.{StackDepthException, TestFailedException}
-import resource._
 
 /**
  * Generic exception class for DirSuite. This is typically thrown in
@@ -163,7 +162,7 @@ trait DirSuiteLike extends FunSuiteLike {
    * @return execline as  args vector
    */
   protected def tokenizer(execLine: String): Array[String] = {
-    // TODO: Fix this silly error handling (we are behind scala-arm...)
+    // TODO: Fix this silly error handling
     if (execLine.isEmpty) {
       // No args-case => ok
       Array[String]()
@@ -202,19 +201,14 @@ trait DirSuiteLike extends FunSuiteLike {
    */
   protected def parseExec(testname: Path): Seq[Array[String]] = {
     val exexPrefix = "exec:"
-    // Scala-ARM: managed close
-    managed(io.Source.fromFile(testname.toString)).map(source => {
-      val execLines = source.getLines
-        .filter(!_.startsWith("#"))
-        .filter(_.startsWith(exexPrefix))
-        .map(_.stripPrefix(exexPrefix))
-        .map(str => str.trim)
-      val execs = execLines.map(tokenizer)
-      execs.toList
-    }).opt match {
-      case Some(execs) => execs
-      case None => Seq[Array[String]]()
-    }
+
+    File(testname).lines
+      .filter(!_.startsWith("#"))
+      .filter(_.startsWith(exexPrefix))
+      .map(_.stripPrefix(exexPrefix))
+      .map(str => str.trim)
+      .map(tokenizer)
+      .toSeq
   }
 
   /**
@@ -258,6 +252,7 @@ trait DirSuiteLike extends FunSuiteLike {
       .glob(basename + ".ref.*")(visitOptions = File.VisitOptions.follow)
       .map(f => f.path)
       .toSeq
+      .sorted
   }
 
   /**
@@ -346,8 +341,8 @@ trait DirSuiteLike extends FunSuiteLike {
 
   private def findFiles(basedir: Path, testPattern: FindFilesPattern): Seq[File] = {
     testPattern match {
-      case glob: Glob => File(basedir).glob(glob.glob).toSeq
-      case regex: Regex => File(basedir).globRegex(regex.regex.r).toSeq
+      case glob: Glob => File(basedir).glob(glob.glob).toSeq.sortBy(_.path)
+      case regex: Regex => File(basedir).globRegex(regex.regex.r).toSeq.sortBy(_.path)
     }
   }
 

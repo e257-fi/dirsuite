@@ -15,8 +15,7 @@ lazy val commonSettings = Seq(
 	"-Xfatal-warnings"),
   wartremoverErrors ++= Warts.allBut(
     Wart.Throw //https://github.com/puffnfresh/wartremover/commit/869763999fcc1fd685c1a8038c974854457b608f
-  ),
-  publishTo := sonatypePublishTo.value,
+  )
 )
 
 lazy val dirsuite = (project in file(".")).
@@ -26,7 +25,6 @@ lazy val dirsuite = (project in file(".")).
     version := "0.21.0-SNAPSHOT",
     fork in run := true,
     libraryDependencies += betterFiles,
-    libraryDependencies += scalaArm,
     libraryDependencies += scalatest
   )
 
