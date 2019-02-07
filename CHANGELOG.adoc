@@ -9,6 +9,23 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 == Release history
 
+=== 0.22.0-SNAPSHOT
+
+Changes ...
+
+==== Fixes
+
+None
+
+==== Development
+
+Updated deps and tools:
+
+* dependencies
+** ...
+* build
+** ...
+
 
 === 0.21.0
 
