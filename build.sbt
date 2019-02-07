@@ -23,7 +23,7 @@ lazy val dirsuite = (project in file(".")).
   settings(commonSettings: _*).
   settings(
     name := "dirsuite",
-    version := "0.20.0",
+    version := "0.21.0-SNAPSHOT",
     fork in run := true,
     libraryDependencies += betterFiles,
     libraryDependencies += scalaArm,

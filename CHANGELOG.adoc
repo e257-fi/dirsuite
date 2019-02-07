@@ -9,6 +9,28 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 == Release history
 
+
+=== 0.21.0-SNAPSHOT
+
+Changes ...
+
+
+==== Fixes
+
+None
+
+
+==== Development
+
+Updated deps and tools:
+
+* dependencies
+** ...
+* build
+** ...
+
+
+
 === 0.20.0
 
 This is same as DirSuite v0.7.0. The difference is that code is
