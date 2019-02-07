@@ -1,0 +1,7 @@
+= DirSuite upgrade guide
+
+
+== DirSuite 0.20.0
+
+New toplevel namespace is `fi.e257.testing`.
+No other changes should be needed.

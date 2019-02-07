@@ -1,0 +1,33 @@
+= Credits
+
+DirSuite has been originally written by e257.fi from scratch.
+Following projects have provided valuable contributions,
+feedback, inspiration and ideas for this project. Thank you for your help!
+
+
+Components (used with DirSuite):
+
+ * link:http://www.scalatest.org/[ScalaTest]
+ * link:https://github.com/pathikrit/better-files[Better-files]
+ * link:https://github.com/jsuereth/scala-arm[Scala-ARM (automatic resource mgmt)]
+
+
+Build-tools (used to build DirSuite):
+
+ * Build, Release and Publish
+ ** link:http://www.scala-sbt.org/[sbt]
+ ** link:https://github.com/xerial/sbt-sonatype[sbt-sonatype] 
+ * QA
+ ** link:https://github.com/scoverage/sbt-coveralls[sbt-coveralls]
+ ** link:https://github.com/scoverage/sbt-scoverage[sbt-scoverage]
+ ** link:https://github.com/wartremover/wartremover[WartRemover]
+
+
+Tests:
+
+ * link:http://www.scalatest.org/[ScalaTest]
+
+
+Ideas and inspiration:
+
+ * link:https://github.com/hrj/abandon[Abandon]

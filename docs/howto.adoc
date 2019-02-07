@@ -1,0 +1,21 @@
+= How to use DirSuite
+
+Under examples are three demo DirSuites, which demonstrates 
+different aspects of DirSuite. These are runnable projects,
+just run `sbt test` on `examples`-directory.
+
+ * link:../examples/tests/[test cases] Test cases which are used by examples. 
+
+ * link:../examples/src/test/scala/DirSuiteDemo.scala[DirSuiteDemo]
+   Example of typical usage of DirSuite
+
+ * link:../examples/src/test/scala/MapArgsDemo.scala[MapArgsDemo]
+   Example of how to map and change test's arguments by DirSuite test
+   (e.g. to provide extra arguments for conf file in actual test code). 
+
+ * link:../examples/src/test/scala/FailureDemo.scala[FailureDemo]
+   Example how to ignore tests and examples of actual error messages when tests fail.
+   These ignored tests will all fail,  if you enable them by changing 
+   `ignore` prefix to `run` prefix.
+
+

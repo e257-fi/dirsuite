@@ -1,0 +1,30 @@
+= DirSuite releases
+
+Current published release is:
+
+ libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.20.0"
+
+See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
+
+
+== Release history
+
+=== 0.20.0
+
+This is same as DirSuite v0.7.0. The difference is that code is
+hosted at gitlab.com and moved under new namespace and groupId.
+
+
+==== Fixes
+
+None
+
+
+==== Development
+
+Updated deps and tools:
+
+* build
+** sbt: 1.2.8
+** sbt-sonatype: 2.3
+

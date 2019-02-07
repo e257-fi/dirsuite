@@ -1,0 +1,2 @@
+# format: exec
+exec:failure/out.content01.is-wrong.txt;1;

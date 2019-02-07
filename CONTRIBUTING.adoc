@@ -1,0 +1,66 @@
+= Contributors Guide
+
+Contributions to the project are welcome!
+
+Before starting working on something, please first check by opening Gitlab issue
+if your plan is feasible and viable from project's perspective.
+
+
+== How to build and test
+
+* You do have sbt, don't you? If not, get it from here:
+  link:http://www.scala-sbt.org/[http://www.scala-sbt.org/]
+  
+=== Get source code
+
+----
+git clone https://gitlab.com/e257/testing/dirsuite.git
+----
+
+=== Build and test 
+
+----
+sbt clean test
+----
+
+=== Generate test coverage reports
+
+----
+sbt clean coverage test coverageReport
+sbt coverageAggregate
+----
+
+== Explore code
+    
+Directory structure follows maven's layout:
+          
+* DirSuite main code: link:./src/main/scala/fi/e257/testing[src -> main -> fi -> e257 -> testing]
+* DirSuite tests
+** link:./tests/dirsuite[tests -> dirsuite] is collection of tests, which are used to test DirSuite 
+** link:./src/test/scala/fi/e257/testing/DirSuiteLikeTest.scala[src -> tests -> DirSuiteLikeTest]
+    contains DirSuite's own tests. E.g. it's used to test DirSuite's own code.
+    These tests are a bit convoluted,  because they are testing test-framework itself.
+* Example dirsuite setups: link:./examples[examples]
+
+== Developer Certificate of Origin
+
+Your pull requests and patches can be merged only if you can certify
+the link:./DCO[Developer Certificate of Origin (DCO), Version 1.1].
+
+By signing-off your commit you certify DCO and acknowlegde that you have
+the rights to submit your pull requsted or patch as an open-source contribution,
+as stated in link:./DCO[Developer Certificate of Origin].
+
+Certifying DCO is done by adding a `Signed-off-by` line
+to **every** git commit message:
+
+    Signed-off-by: gitlab-account <your.real@email.address>
+
+If you set your `user.name` and `user.email` correctly in git config,
+then git will automatically include that line for you with `git commit -s`.
+You can also create a git `commit.template` with appropriate content. These
+settings can be done per repository basis,  so they don't have to be globally
+set in your system.
+ 
+Please make sure that you sign-off all your PR's commits.
+
