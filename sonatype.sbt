@@ -14,24 +14,25 @@
  * limitations under the License.
  *
  */
-inThisBuild(
-  List(
-    sonatypeProfileName := "fi.e257",
-    publishMavenStyle := true,
-    licenses := Seq(
-      ("Apache License, Version 2.0", url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
-    ),
-    homepage := Some(
-      url("https://gitlab.com/e257/testing/dirsuite")
-    ),
-    scmInfo := Some(
-      ScmInfo(
-        url("https://gitlab.com/e257/testing/dirsuite"),
-        "scm:git:https://gitlab.com/e257/testing/dirsuite.git"
-      )
-    ),
-    developers := List(
-      Developer(id = "e257", name = "E257", email = "dev-x64ae53@e257.fi", url = url("https://e257.fi/devel"))
-    )
+
+sonatypeProfileName := "fi.e257"
+
+publishMavenStyle := true
+
+licenses := Seq(("Apache License, Version 2.0", url("http://www.apache.org/licenses/LICENSE-2.0.txt")))
+
+homepage := Some(url("https://gitlab.com/e257/testing/dirsuite"))
+
+scmInfo := Some(
+  ScmInfo(
+    url("https://gitlab.com/e257/testing/dirsuite"),
+    "scm:git:https://gitlab.com/e257/testing/dirsuite.git"
   )
 )
+
+developers := List(
+  Developer(id = "e257", name = "E257", email = "dev-x64ae53@e257.fi", url = url("https://e257.fi/devel"))
+)
+
+publishTo := sonatypePublishTo.value
+
