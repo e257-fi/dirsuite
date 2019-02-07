@@ -1,5 +1,10 @@
 = DirSuite upgrade guide
 
+== DirSuite 0.21.0
+
+No code changes need. Execution order of test cases
+is enforced and it is based on sorting order of test cases path names. 
+
 
 == DirSuite 0.20.0
 
