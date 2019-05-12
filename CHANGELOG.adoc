@@ -2,14 +2,14 @@
 
 Current published release is:
 
- libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.21.0"
+ libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.30.0"
 
 See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 
 == Release history
 
-=== 0.30.0-SNAPSHOT
+=== 0.30.0
 
 This release is same as 0.21.0, but it is not binary-compatible with code compiled with better-files 3.7.x:
 link:https://github.com/pathikrit/better-files/issues/301[Better-files: Binary imcompatibility between 3.7.0 and 3.7.1]
