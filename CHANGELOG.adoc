@@ -9,6 +9,24 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 == Release history
 
+=== 0.31.0-SNAPSHOT
+
+Changes ...
+
+==== Fixes
+
+None
+
+==== Development
+
+Updated deps and tools:
+
+* dependencies
+** ...
+* build
+** ...
+
+
 === 0.30.0
 
 This release is same as 0.21.0, but it is not binary-compatible with code compiled with better-files 3.7.x:
