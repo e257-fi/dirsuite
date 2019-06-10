@@ -6,7 +6,7 @@ object Dependencies {
    * Versions
    */
   val betterFilesVersion = "3.8.0"
-  val scalatestVersion = "3.0.7"
+  val scalatestVersion = "3.0.8"
 
   /*
    * Libraries: scala
