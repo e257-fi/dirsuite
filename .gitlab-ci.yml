@@ -20,11 +20,11 @@ test·jdk11:
   stage: "test"
 
   script:
-    - sbt clean test
+    - sbt clean "+ test"
 
 
 test·jdk8:
-  image: "hseeberger/scala-sbt:8u181_2.12.8_1.2.8"
+  image: "hseeberger/scala-sbt:8u212_2.12.8_1.2.8"
 
   variables:
     SBT_OPTS: "-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
@@ -32,6 +32,7 @@ test·jdk8:
   stage: "test"
 
   script:
+    - sbt clean "+ test"
     - sbt clean coverageOn test coverageReport
     - sbt coverageAggregate
 

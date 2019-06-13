@@ -4,9 +4,13 @@ import Dependencies._
  * Build settings for DirSuite
  */
 
+lazy val scala212 = "2.12.8"
+lazy val scala213 = "2.13.0"
+lazy val supportedScalaVersions = List(scala212, scala213)
+
 lazy val commonSettings = Seq(
   organization := "fi.e257.testing",
-  scalaVersion := "2.12.8",
+  scalaVersion := scala213,
   scalacOptions ++= Seq(
 	"-Xlint",
 	"-deprecation",
@@ -21,6 +25,7 @@ lazy val commonSettings = Seq(
 lazy val dirsuite = (project in file(".")).
   settings(commonSettings: _*).
   settings(
+    crossScalaVersions := supportedScalaVersions,
     name := "dirsuite",
     version := "0.31.0-SNAPSHOT",
     fork in run := true,

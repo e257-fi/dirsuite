@@ -11,7 +11,7 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 === 0.31.0-SNAPSHOT
 
-Changes ...
+Changes crossbuild for Scala 2.12 and 2.13
 
 ==== Fixes
 
@@ -22,9 +22,9 @@ None
 Updated deps and tools:
 
 * dependencies
-** ...
+** scalatest: 3.0.8
 * build
-** ...
+** sbt-scoverage: 1.6.0
 
 
 === 0.30.0
