@@ -27,7 +27,7 @@ lazy val dirsuite = (project in file(".")).
   settings(
     crossScalaVersions := supportedScalaVersions,
     name := "dirsuite",
-    version := "0.30.1",
+    version := "0.31.0-SNAPSHOT",
     fork in run := true,
     libraryDependencies += betterFiles,
     libraryDependencies += scalatest
