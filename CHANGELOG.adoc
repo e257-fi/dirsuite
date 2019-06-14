@@ -2,16 +2,16 @@
 
 Current published release is:
 
- libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.30.0"
+ libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.30.1"
 
 See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 
 == Release history
 
-=== 0.31.0-SNAPSHOT
+=== 0.30.1
 
-Changes crossbuild for Scala 2.12 and 2.13
+Crossbuild for Scala 2.12 and 2.13
 
 ==== Fixes
 

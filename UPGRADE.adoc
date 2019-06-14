@@ -1,5 +1,10 @@
 = DirSuite upgrade guide
 
+== DirSuite 0.30.1
+
+No code changes needed. Released for Scala 2.12 and 2.13.
+
+
 == DirSuite 0.30.0
 
 No code changes needed, but transitive dependency of better-files must be upgraded to 3.8.0:
