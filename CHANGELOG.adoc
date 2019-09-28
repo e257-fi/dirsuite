@@ -4,36 +4,44 @@ Current published release is:
 
  libraryDependencies += "fi.e257.testing" %% "dirsuite"  % "0.30.1"
 
+
 See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 
 == Release history
 
-=== 0.31.0-SNAPSHOT
+=== 0.30.2-SNAPSHOT
 
-Changes ...
+Rebuild with Scala 2.12.10, 2.13.1
+
 
 ==== Fixes
 
 None
 
+
 ==== Development
 
 Updated deps and tools:
 
-* dependencies
-** ...
-* build
-** ...
+* Build
+** scala: 2.12.10
+** scala: 2.13.1
+** sbt: 1.3.2
+** sbt-wartremover: 2.4.3
+** sbt-sonatype: 3.8
+
 
 
 === 0.30.1
 
 Crossbuild for Scala 2.12 and 2.13
 
+
 ==== Fixes
 
 None
+
 
 ==== Development
 
@@ -43,6 +51,7 @@ Updated deps and tools:
 ** scalatest: 3.0.8
 * build
 ** sbt-scoverage: 1.6.0
+
 
 
 === 0.30.0
@@ -55,6 +64,7 @@ link:https://github.com/pathikrit/better-files/issues/301[Better-files: Binary i
 
 None
 
+
 ==== Development
 
 Updated deps and tools:
@@ -66,9 +76,11 @@ Updated deps and tools:
 ** sbt-wartremover: 2.4.2
 
 
+
 === 0.21.0
 
 Dependency updates and enforced ordering of execution of test cases.
+
 
 ==== Fixes
 

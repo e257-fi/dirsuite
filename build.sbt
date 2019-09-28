@@ -4,8 +4,8 @@ import Dependencies._
  * Build settings for DirSuite
  */
 
-lazy val scala212 = "2.12.8"
-lazy val scala213 = "2.13.0"
+lazy val scala212 = "2.12.10"
+lazy val scala213 = "2.13.1"
 lazy val supportedScalaVersions = List(scala212, scala213)
 
 lazy val commonSettings = Seq(
@@ -27,7 +27,7 @@ lazy val dirsuite = (project in file(".")).
   settings(
     crossScalaVersions := supportedScalaVersions,
     name := "dirsuite",
-    version := "0.31.0-SNAPSHOT",
+    version := "0.30.2-SNAPSHOT",
     fork in run := true,
     libraryDependencies += betterFiles,
     libraryDependencies += scalatest
