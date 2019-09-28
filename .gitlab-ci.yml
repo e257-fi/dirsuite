@@ -12,7 +12,7 @@ cache:
     - "sbt-cache/sbtboot"
 
 test·jdk11:
-  image: "hseeberger/scala-sbt:11.0.2_2.12.8_1.2.8"
+  image: "hseeberger/scala-sbt:11.0.4_1.3.2_2.13.1"
 
   variables:
     SBT_OPTS: "-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
@@ -20,11 +20,11 @@ test·jdk11:
   stage: "test"
 
   script:
-    - sbt clean "+ test"
+    - sbt "+clean" "+test"
 
 
 test·jdk8:
-  image: "hseeberger/scala-sbt:8u212_2.12.8_1.2.8"
+  image: "hseeberger/scala-sbt:8u222_1.3.2_2.13.1"
 
   variables:
     SBT_OPTS: "-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
@@ -32,8 +32,20 @@ test·jdk8:
   stage: "test"
 
   script:
-    - sbt clean "+ test"
-    - sbt clean coverageOn test coverageReport
-    - sbt coverageAggregate
+    - sbt "+clean" "+test"
 
-  coverage: '/All done. Coverage was \[\d+.\d+%\]/'
+###
+### Disable coverate until 
+### https://github.com/scoverage/sbt-scoverage/issues/295 
+### is fixed
+###
+#codecov:
+#  image: "hseeberger/scala-sbt:8u222_1.3.2_2.13.1"
+#
+#  stage: "test"
+#
+#  script:
+#    - sbt "+clean" coverage "++2.13.1! test"
+#    - sbt "++2.13.1! coverageAggregate"
+#
+#  coverage: '/All done. Coverage was \[\d+.\d+%\]/'
