@@ -10,6 +10,27 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 == Release history
 
+=== 0.31.0-SNAPSHOT
+
+Changes in this release ...
+
+
+==== Fixes
+
+None
+
+
+==== Development
+
+Updated deps and tools:
+
+* Dependencies
+** ..
+* Build
+** ..
+
+
+
 === 0.30.2
 
 Rebuild with Scala 2.12.10, 2.13.1
