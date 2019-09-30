@@ -21,7 +21,7 @@ cache:
     - "sbt-cache/coursier/cache"
 
 variables:
-  SBT_OPTS: "-Dsbt.log.noformat=true -Dsbt.global.base=sbt-cache/sbt/2.0 -Dsbt.boot.directory=sbt-cache/sbt/boot -Dsbt.coursier.home=sbt-cache/coursier/cache"
+  SBT_OPTS: "-Dsbt.log.noformat=true -Dsbt.global.base=sbt-cache/sbt/1.0 -Dsbt.boot.directory=sbt-cache/sbt/boot -Dsbt.coursier.home=sbt-cache/coursier/cache"
 
 
 
@@ -44,17 +44,16 @@ test·jdk8:
 
 
 ###
-### Disable coverate until 
-### https://github.com/scoverage/sbt-scoverage/issues/295 
+### Use scala 2.13.0 for coverate until
+### https://github.com/scoverage/sbt-scoverage/issues/295
 ### is fixed
-###
-#codecov:
-#  image: "hseeberger/scala-sbt:8u222_1.3.2_2.13.1"
-#
-#  stage: "test"
-#
-#  script:
-#    - sbt "+clean" coverage "++2.13.1! test"
-#    - sbt "++2.13.1! coverageAggregate"
-#
-#  coverage: '/All done. Coverage was \[\d+.\d+%\]/'
+codecov:
+  image: "hseeberger/scala-sbt:8u222_1.3.2_2.13.1"
+
+  stage: "test"
+
+  script:
+    - sbt "+clean" coverage "++2.13.0! test"
+    - sbt "++2.13.0! coverageAggregate"
+
+  coverage: '/All done. Coverage was \[\d+.\d+%\]/'

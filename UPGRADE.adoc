@@ -2,12 +2,12 @@
 
 == DirSuite 0.30.2
 
-No code changes needed. Rebuild with Scala 2.12.10 and 2.13.1.
+No changes needed.
 
 
 == DirSuite 0.30.1
 
-No code changes needed. Released for Scala 2.12 and 2.13.
+No changes needed.
 
 
 == DirSuite 0.30.0
@@ -18,8 +18,8 @@ link:https://github.com/pathikrit/better-files/issues/301[Better-files: Binary i
 
 == DirSuite 0.21.0
 
-No code changes need. Execution order of test cases
-is enforced and it is based on sorting order of test cases path names. 
+No code changes need. However execution order of test cases
+is enforced and it is now based on sorting order of path names of test cases. 
 
 
 == DirSuite 0.20.0
