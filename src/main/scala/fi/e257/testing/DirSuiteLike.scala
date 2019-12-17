@@ -20,8 +20,10 @@ import java.nio.file.Path
 
 import better.files._
 import org.scalactic.source.Position
-import org.scalatest.FunSuiteLike
+import org.scalatest.funsuite.AnyFunSuiteLike
 import org.scalatest.exceptions.{StackDepthException, TestFailedException}
+
+import scala.collection.immutable
 
 /**
  * Generic exception class for DirSuite. This is typically thrown in
@@ -34,8 +36,9 @@ class DirSuiteException(msg: String, cause: Option[Throwable]) extends
   TestFailedException(
     { _: StackDepthException => Some(msg) },
     cause,
-    Left[Position, (StackDepthException) => Int](Position("", "", 0)),
-    None
+    Left[Position, StackDepthException => Int](Position("", "", 0)),
+    None,
+    immutable.IndexedSeq.empty[String]
   )
 
 /**
@@ -53,8 +56,9 @@ class TestVectorException(msg: String, cause: Option[Throwable]) extends
   TestFailedException(
     { _: StackDepthException => Some(msg) },
     cause,
-    Left[Position, (StackDepthException) => Int](Position("", "", 0)),
-    None
+    Left[Position, StackDepthException => Int](Position("", "", 0)),
+    None,
+    immutable.IndexedSeq.empty[String]
   )
 
 /**
@@ -133,7 +137,7 @@ object DirSuiteLike {
 @SuppressWarnings(Array(
   "org.wartremover.warts.ToString",
   "org.wartremover.warts.NonUnitStatements"))
-trait DirSuiteLike extends FunSuiteLike {
+trait DirSuiteLike extends AnyFunSuiteLike {
 
   /**
    * Get separator for exec line splitting.
