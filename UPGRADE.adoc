@@ -1,5 +1,11 @@
 = DirSuite upgrade guide
 
+== DirSuite 0.31.0
+
+ScalaTest must be upgraded to 3.1.+
+For ScalaTest changes, see: http://www.scalatest.org/release_notes/3.1.0
+
+
 == DirSuite 0.30.2
 
 No changes needed.
