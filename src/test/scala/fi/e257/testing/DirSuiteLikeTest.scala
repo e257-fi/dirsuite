@@ -19,11 +19,12 @@ package fi.e257.testing
 import java.nio.charset.StandardCharsets
 import java.nio.file.{FileSystem, FileSystems, Files, Path}
 
+import better.files._
 import org.scalatest.events.{Event, TestFailed}
 import org.scalatest.exceptions.TestFailedException
-import org.scalatest.{Args, FlatSpec, Inside, Matchers, Reporter}
-
-import better.files._
+import org.scalatest.flatspec.AnyFlatSpecLike
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.{Args, Inside, Reporter}
 
 /**
  * How to test the Testers?
@@ -41,7 +42,7 @@ import better.files._
   "org.wartremover.warts.Var",
   "org.wartremover.warts.ToString",
   "org.wartremover.warts.NonUnitStatements"))
-class YeOldeDirSuiteSpec extends FlatSpec with Matchers with Inside {
+class YeOldeDirSuiteSpec extends AnyFlatSpecLike with Matchers with Inside {
 
   val filesystem: FileSystem = FileSystems.getDefault
   val testdir: Path = filesystem.getPath("tests/dirsuite").toAbsolutePath.normalize
