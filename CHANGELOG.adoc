@@ -10,6 +10,27 @@ See link:./UPGRADE.adoc[Upgrade Guide] for needed changes between versions.
 
 == Release history
 
+=== 0.32.0-SNAPSHOT
+
+Changes in this release ...
+
+
+==== Fixes
+
+None
+
+
+==== Development
+
+Updated deps and tools:
+
+* Dependencies
+** ..
+* Build
+** ..
+
+
+
 === 0.31.0
 
 Support ScalaTest 3.1.0
